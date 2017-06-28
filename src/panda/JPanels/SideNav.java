@@ -35,8 +35,14 @@ public class SideNav extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 51, 51));
+        setBackground(new java.awt.Color(51, 51, 51));
         setPreferredSize(new java.awt.Dimension(200, 600));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -45,51 +51,120 @@ public class SideNav extends javax.swing.JPanel {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel1MouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel1MouseExited(evt);
+            }
         });
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/panda/Imagenes/SideNav/panda.jpg"))); // NOI18N
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 110));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/panda/Imagenes/SideNav/lab.jpg"))); // NOI18N
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel3MouseExited(evt);
+            }
+        });
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, -1, -1));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/panda/Imagenes/SideNav/estadisticas.jpg"))); // NOI18N
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel4MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel4MouseExited(evt);
+            }
+        });
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, -1, -1));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/panda/Imagenes/SideNav/admin.jpg"))); // NOI18N
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel5MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel5MouseExited(evt);
+            }
+        });
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, -1, -1));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/panda/Imagenes/SideNav/perfiles.jpg"))); // NOI18N
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel6MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel6MouseExited(evt);
+            }
+        });
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, -1, -1));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/panda/Imagenes/SideNav/micuenta.jpg"))); // NOI18N
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel7MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel7MouseExited(evt);
+            }
+        });
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 460, -1, -1));
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/panda/Imagenes/SideNav/cerrarsesion.jpg"))); // NOI18N
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel8MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel8MouseExited(evt);
+            }
+        });
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 530, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
-    public ImageIcon ImgPanda = null;
+    //public ImageIcon ImgPanda = null;
     public ImageIcon ImgConsultas = null;
     public ImageIcon ImgLaboratorios = null;
     public ImageIcon ImgEstadisticas = null;
     public ImageIcon ImgAdministracion = null;
     public ImageIcon ImgPerfiles = null;
     public ImageIcon ImgMiCuenta = null;
-    public ImageIcon ImgCerrarCesion = null;
+    public ImageIcon ImgCerrarSesion = null;
     
-    public ImageIcon ImgPandaHover = null;
+    //public ImageIcon ImgPandaHover = null;
     public ImageIcon ImgConsultasHover = null;
     public ImageIcon ImgLaboratoriosHover = null;
     public ImageIcon ImgEstadisticasHover = null;
     public ImageIcon ImgAdministracionHover = null;
     public ImageIcon ImgPerfilesHover = null;
     public ImageIcon ImgMiCuentaHover = null;
-    public ImageIcon ImgCerrarCesionHover = null;
+    public ImageIcon ImgCerrarSesionHover = null;
 
     private void CargarImagenes() {
         try {
-            ImgPanda = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/SideNav/btnTipoUsuario.png")));
-            ImgConsultas = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/MenuAdministracion/btnTipoUsuario-hover.png")));
-            ImgLaboratorios = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/MenuAdministracion/btnEnfermedades.png")));
-            ImgEstadisticas = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/MenuAdministracion/btnEnfermedades-hover.png")));
-            ImgAdministracion = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/MenuAdministracion/btnHospitalizacion.png")));
-            ImgPerfiles = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/MenuAdministracion/btnHospitalizacion-hover.png")));
-            ImgMiCuenta = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/MenuAdministracion/btnSintomas.png")));
-            ImgCerrarCesion = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/MenuAdministracion/btnSintomas-hover.png")));
+            //ImgPanda = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/SideNav/btnTipoUsuario.png")));
+            ImgConsultas = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/SideNav/consultas.jpg")));
+            ImgLaboratorios = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/SideNav/lab.jpg")));
+            ImgEstadisticas = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/SideNav/estadisticas.jpg")));
+            ImgAdministracion = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/SideNav/admin.jpg")));
+            ImgPerfiles = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/SideNav/perfiles.jpg")));
+            ImgMiCuenta = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/SideNav/micuenta.jpg")));
+            ImgCerrarSesion = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/SideNav/cerrarsesion.jpg")));
             
             
-            ImgPanda = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/MenuAdministracion/btnTipoUsuario.png")));
-            ImgConsultas = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/MenuAdministracion/btnTipoUsuario-hover.png")));
-            ImgLaboratorios = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/MenuAdministracion/btnEnfermedades.png")));
-            ImgEstadisticas = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/MenuAdministracion/btnEnfermedades-hover.png")));
-            ImgAdministracion = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/MenuAdministracion/btnHospitalizacion.png")));
-            ImgPerfiles = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/MenuAdministracion/btnHospitalizacion-hover.png")));
-            ImgMiCuenta = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/MenuAdministracion/btnSintomas.png")));
-            ImgCerrarCesion = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/MenuAdministracion/btnSintomas-hover.png")));
+            //ImgPanda = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/SideNav/btnTipoUsuario.png")));
+            ImgConsultasHover = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/SideNav/consultas-hover.jpg")));
+            ImgLaboratoriosHover = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/SideNav/lab-hover.jpg")));
+            ImgEstadisticasHover = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/SideNav/estadisticas-hover.jpg")));
+            ImgAdministracionHover = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/SideNav/admin-hover.jpg")));
+            ImgPerfilesHover = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/SideNav/perfiles-hover.jpg")));
+            ImgMiCuentaHover = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/SideNav/micuenta-hover.jpg")));
+            ImgCerrarSesionHover = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/SideNav/cerrarsesion-hover.jpg")));
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "yay no funciona", "InfoBox: " + "titulo", JOptionPane.INFORMATION_MESSAGE);
@@ -99,7 +174,144 @@ public class SideNav extends javax.swing.JPanel {
     
     private void jLabel1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseEntered
         // TODO add your handling code here:
+        try {
+            jLabel1.setIcon(ImgConsultasHover);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "yay no funciona", "InfoBox: " + "titulo", JOptionPane.INFORMATION_MESSAGE);
+
+        }
     }//GEN-LAST:event_jLabel1MouseEntered
+
+    private void jLabel1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseExited
+        // TODO add your handling code here:
+        try {
+            jLabel1.setIcon(ImgConsultas);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "yay no funciona", "InfoBox: " + "titulo", JOptionPane.INFORMATION_MESSAGE);
+
+        }
+    }//GEN-LAST:event_jLabel1MouseExited
+
+    private void jLabel3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseEntered
+        // TODO add your handling code here:
+        try {
+            jLabel3.setIcon(ImgLaboratoriosHover);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "yay no funciona", "InfoBox: " + "titulo", JOptionPane.INFORMATION_MESSAGE);
+
+        }
+    }//GEN-LAST:event_jLabel3MouseEntered
+
+    private void jLabel3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseExited
+        // TODO add your handling code here:
+        try {
+            jLabel3.setIcon(ImgLaboratorios);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "yay no funciona", "InfoBox: " + "titulo", JOptionPane.INFORMATION_MESSAGE);
+
+        }
+    }//GEN-LAST:event_jLabel3MouseExited
+
+    private void jLabel4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseEntered
+        // TODO add your handling code here:
+        try {
+            jLabel4.setIcon(ImgEstadisticasHover);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "yay no funciona", "InfoBox: " + "titulo", JOptionPane.INFORMATION_MESSAGE);
+
+        }
+    }//GEN-LAST:event_jLabel4MouseEntered
+
+    private void jLabel4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseExited
+        // TODO add your handling code here:
+        try {
+            jLabel4.setIcon(ImgEstadisticas);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "yay no funciona", "InfoBox: " + "titulo", JOptionPane.INFORMATION_MESSAGE);
+
+        }
+    }//GEN-LAST:event_jLabel4MouseExited
+
+    private void jLabel5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseEntered
+        // TODO add your handling code here:
+        try {
+            jLabel5.setIcon(ImgAdministracionHover);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "yay no funciona", "InfoBox: " + "titulo", JOptionPane.INFORMATION_MESSAGE);
+
+        }
+        
+    }//GEN-LAST:event_jLabel5MouseEntered
+
+    private void jLabel5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseExited
+        // TODO add your handling code here:
+        try {
+            jLabel5.setIcon(ImgAdministracion);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "yay no funciona", "InfoBox: " + "titulo", JOptionPane.INFORMATION_MESSAGE);
+
+        }
+    }//GEN-LAST:event_jLabel5MouseExited
+
+    private void jLabel6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseEntered
+        // TODO add your handling code here:
+        try {
+            jLabel6.setIcon(ImgPerfilesHover);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "yay no funciona", "InfoBox: " + "titulo", JOptionPane.INFORMATION_MESSAGE);
+
+        }
+    }//GEN-LAST:event_jLabel6MouseEntered
+
+    private void jLabel6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseExited
+        // TODO add your handling code here:
+        try {
+            jLabel6.setIcon(ImgPerfiles);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "yay no funciona", "InfoBox: " + "titulo", JOptionPane.INFORMATION_MESSAGE);
+
+        }
+    }//GEN-LAST:event_jLabel6MouseExited
+
+    private void jLabel7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseEntered
+        // TODO add your handling code here:
+        try {
+            jLabel7.setIcon(ImgMiCuentaHover);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "yay no funciona", "InfoBox: " + "titulo", JOptionPane.INFORMATION_MESSAGE);
+
+        }
+    }//GEN-LAST:event_jLabel7MouseEntered
+
+    private void jLabel7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseExited
+        // TODO add your handling code here:
+        try {
+            jLabel7.setIcon(ImgMiCuenta);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "yay no funciona", "InfoBox: " + "titulo", JOptionPane.INFORMATION_MESSAGE);
+
+        }
+    }//GEN-LAST:event_jLabel7MouseExited
+
+    private void jLabel8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseEntered
+        // TODO add your handling code here:
+        try {
+            jLabel8.setIcon(ImgCerrarSesionHover);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "yay no funciona", "InfoBox: " + "titulo", JOptionPane.INFORMATION_MESSAGE);
+
+        }
+    }//GEN-LAST:event_jLabel8MouseEntered
+
+    private void jLabel8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseExited
+        // TODO add your handling code here:
+        try {
+            jLabel8.setIcon(ImgCerrarSesion);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "yay no funciona", "InfoBox: " + "titulo", JOptionPane.INFORMATION_MESSAGE);
+
+        }
+    }//GEN-LAST:event_jLabel8MouseExited
 //Cambiar area  panda.Panda.mamain.CambiarPanelDeArea(4);
 
 //Cambiar en navegacion  panda.Panda.mamain.CambiarPanelEnNavegacion(2);
@@ -107,5 +319,11 @@ public class SideNav extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     // End of variables declaration//GEN-END:variables
 }
