@@ -16,6 +16,8 @@ public class FrmNavegacion extends javax.swing.JPanel {
      */
     public FrmNavegacion() {
         initComponents();
+        jLabel2.setVisible(false);
+
     }
 
     public void EsconderPaneles(){
@@ -57,12 +59,16 @@ public class FrmNavegacion extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
         sideNav1 = new panda.JPanels.SideNav();
         frmMiCuenta1 = new panda.JPanels.FrmMiCuenta();
         frmAdministracion1 = new panda.JPanels.FrmAdministracion();
 
         setPreferredSize(new java.awt.Dimension(1000, 600));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/panda/Imagenes/MenuPrincipal/trans2.gif"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 600));
         add(sideNav1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
         add(frmMiCuenta1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, -1, -1));
         add(frmAdministracion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, -1, -1));
@@ -72,6 +78,7 @@ public class FrmNavegacion extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private panda.JPanels.FrmAdministracion frmAdministracion1;
     private panda.JPanels.FrmMiCuenta frmMiCuenta1;
+    private javax.swing.JLabel jLabel2;
     private panda.JPanels.SideNav sideNav1;
     // End of variables declaration//GEN-END:variables
 }
