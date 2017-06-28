@@ -84,6 +84,9 @@ public class SideNav extends javax.swing.JPanel {
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/panda/Imagenes/SideNav/admin.jpg"))); // NOI18N
         jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel5MouseEntered(evt);
             }
@@ -312,6 +315,11 @@ public class SideNav extends javax.swing.JPanel {
 
         }
     }//GEN-LAST:event_jLabel8MouseExited
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        // TODO add your handling code here:
+        panda.Panda.mamain.CambiarPanel(1);
+    }//GEN-LAST:event_jLabel5MouseClicked
 //Cambiar area  panda.Panda.mamain.CambiarPanelDeArea(4);
 
 //Cambiar en navegacion  panda.Panda.mamain.CambiarPanelEnNavegacion(2);
