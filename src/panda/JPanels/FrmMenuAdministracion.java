@@ -73,10 +73,16 @@ public class FrmMenuAdministracion extends javax.swing.JPanel {
             }
         });
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/panda/Imagenes/MenuAdministracion/btnMedidas.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/panda/Imagenes/MenuAdministracion/btnOtros.png"))); // NOI18N
         jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel4MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel4MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel4MouseExited(evt);
             }
         });
 
@@ -91,6 +97,14 @@ public class FrmMenuAdministracion extends javax.swing.JPanel {
         });
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/panda/Imagenes/MenuAdministracion/btnMedicamentos.png"))); // NOI18N
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel6MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel6MouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -137,6 +151,10 @@ public class FrmMenuAdministracion extends javax.swing.JPanel {
     public ImageIcon ImgHospitalizacionHover = null;
     public ImageIcon ImgSintomas = null;
     public ImageIcon ImgSintomasHover = null;
+    public ImageIcon ImgMedicamentos = null;
+    public ImageIcon ImgMedicamentosHover = null;
+    public ImageIcon ImgOtros = null;
+    public ImageIcon ImgOtrosHover = null;
 
     private void CargarImagenes() {
         try {
@@ -148,6 +166,11 @@ public class FrmMenuAdministracion extends javax.swing.JPanel {
             ImgHospitalizacionHover = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/MenuAdministracion/btnHospitalizacion-hover.png")));
             ImgSintomas = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/MenuAdministracion/btnSintomas.png")));
             ImgSintomasHover = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/MenuAdministracion/btnSintomas-hover.png")));
+            ImgMedicamentos = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/MenuAdministracion/btnMedicamentos.png")));
+            ImgMedicamentosHover = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/MenuAdministracion/btnMedicamentos-hover.png")));
+            ImgOtros = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/MenuAdministracion/btnOtros.png")));
+            ImgOtrosHover = new ImageIcon(ImageIO.read(new File("src/panda/Imagenes/MenuAdministracion/btnOtros-hover.png")));
+            
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "yay no funciona", "InfoBox: " + "titulo", JOptionPane.INFORMATION_MESSAGE);
@@ -240,6 +263,46 @@ public class FrmMenuAdministracion extends javax.swing.JPanel {
         panda.Panda.mamain.CambiarPanel(2);
         
     }//GEN-LAST:event_jLabel4MouseClicked
+
+    private void jLabel6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseEntered
+        // TODO add your handling code here:
+        try {
+            jLabel6.setIcon(ImgMedicamentosHover);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "yay no funciona", "InfoBox: " + "titulo", JOptionPane.INFORMATION_MESSAGE);
+
+        }
+    }//GEN-LAST:event_jLabel6MouseEntered
+
+    private void jLabel6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseExited
+        // TODO add your handling code here:
+        try {
+            jLabel6.setIcon(ImgMedicamentos);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "yay no funciona", "InfoBox: " + "titulo", JOptionPane.INFORMATION_MESSAGE);
+
+        }
+    }//GEN-LAST:event_jLabel6MouseExited
+
+    private void jLabel4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseEntered
+        // TODO add your handling code here:
+        try {
+            jLabel4.setIcon(ImgOtrosHover);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "yay no funciona", "InfoBox: " + "titulo", JOptionPane.INFORMATION_MESSAGE);
+
+        }
+    }//GEN-LAST:event_jLabel4MouseEntered
+
+    private void jLabel4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseExited
+        // TODO add your handling code here:
+         try {
+            jLabel4.setIcon(ImgOtros);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "yay no funciona", "InfoBox: " + "titulo", JOptionPane.INFORMATION_MESSAGE);
+
+        }
+    }//GEN-LAST:event_jLabel4MouseExited
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
